@@ -537,7 +537,7 @@ nav {
     margin-bottom: 0;
 }
 
-/* Contact Section */
+/* Contact Section - New Card Layout */
 .contact {
     padding: 8rem 1rem;
     background-color: var(--light-gray);
@@ -559,9 +559,11 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.5rem;
     width: 100%;
     box-sizing: border-box;
 }
@@ -574,14 +576,8 @@ nav {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 2rem;
-    background-color: var(--white);
-    padding: 2.5rem;
-    border-radius: 15px;
-    -webkit-box-shadow: var(--shadow);
-    box-shadow: var(--shadow);
+    gap: 1.5rem;
     width: 100%;
-    max-width: 500px;
     box-sizing: border-box;
 }
 
@@ -592,25 +588,33 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.5rem;
     width: 100%;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
     box-sizing: border-box;
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .contact-text {
-    max-width: calc(100% - 4rem);
+    flex: 1;
 }
 
 .contact-item i {
-    font-size: 1.4rem;
-    color: var(--accent-color);
-    background-color: rgba(0, 184, 148, 0.1);
-    padding: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--accent-color);
+    padding: 1rem;
     border-radius: 50%;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.5rem;
+    height: 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -625,9 +629,10 @@ nav {
 
 .contact-item a,
 .contact-item p {
-    color: var(--dark-gray);
+    color: var(--primary-color);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     line-height: 1.4;
     margin: 0;
     overflow-wrap: break-word;
@@ -824,27 +829,29 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .contact-content {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        gap: 3rem;
-        padding: 0 1rem;
+    .contact {
+        padding: 6rem 1rem;
     }
     
-    .contact-info {
-        max-width: 100%;
-        padding: 2rem;
+    .contact h2 {
+        margin-bottom: 3rem;
     }
     
     .contact-item {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
+        padding: 1.2rem;
+        gap: 1.2rem;
+    }
+    
+    .contact-item i {
+        font-size: 1.3rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        padding: 0.8rem;
+    }
+    
+    .contact-item a,
+    .contact-item p {
+        font-size: 1rem;
     }
 
     .hero {
@@ -924,27 +931,6 @@ footer {
     .experience-category ul li::before {
         font-size: 0.9rem;
     }
-
-    .contact {
-        padding: 6rem 1rem;
-    }
-    
-    .contact-info {
-        padding: 2rem;
-        gap: 1.8rem;
-    }
-    
-    .contact-item i {
-        font-size: 1.2rem;
-        width: 1.2rem;
-        height: 1.2rem;
-        padding: 0.7rem;
-    }
-    
-    .contact-item a,
-    .contact-item p {
-        font-size: 0.95rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -994,29 +980,24 @@ footer {
     }
     
     .contact h2 {
-        margin-bottom: 3rem;
-    }
-    
-    .contact-info {
-        padding: 1.5rem;
-        gap: 1.5rem;
+        margin-bottom: 2.5rem;
     }
     
     .contact-item {
+        padding: 1rem;
         gap: 1rem;
     }
     
     .contact-item i {
-        font-size: 1.1rem;
-        width: 1.1rem;
-        height: 1.1rem;
-        padding: 0.6rem;
+        font-size: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        padding: 0.7rem;
     }
     
     .contact-item a,
     .contact-item p {
-        font-size: 0.9rem;
-        max-width: calc(100% - 3.5rem);
+        font-size: 0.95rem;
     }
 
     .contact-text {
