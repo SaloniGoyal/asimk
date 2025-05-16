@@ -553,12 +553,10 @@ nav {
 }
 
 .contact-content {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-info {
@@ -569,7 +567,13 @@ nav {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 500px;
 }
 
 .contact-item {
@@ -579,12 +583,15 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .contact-item i {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--accent-color);
+    background-color: rgba(0, 184, 148, 0.1);
+    padding: 1rem;
+    border-radius: 50%;
 }
 
 .contact-item a,
@@ -592,58 +599,6 @@ nav {
     color: var(--dark-gray);
     text-decoration: none;
     font-size: 1.1rem;
-}
-
-.contact-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 1rem;
-    border: 2px solid #E0E0E0;
-    border-radius: 8px;
-    font-size: 1rem;
-    -webkit-transition: var(--transition);
-    transition: var(--transition);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-.contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.submit-button {
-    padding: 1rem 2rem;
-    background-color: var(--accent-color);
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    -webkit-transition: var(--transition);
-    transition: var(--transition);
-    box-shadow: var(--shadow);
-}
-
-.submit-button:hover {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    background-color: #00A187;
 }
 
 /* Footer */
@@ -837,6 +792,7 @@ footer {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 3rem;
+        padding: 0 1rem;
     }
 
     .hero {
