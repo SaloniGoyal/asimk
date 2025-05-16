@@ -541,6 +541,7 @@ nav {
 .contact {
     padding: 8rem 1rem;
     background-color: var(--light-gray);
+    overflow-x: hidden;
 }
 
 .contact h2 {
@@ -561,6 +562,8 @@ nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-info {
@@ -579,6 +582,7 @@ nav {
     box-shadow: var(--shadow);
     width: 100%;
     max-width: 500px;
+    box-sizing: border-box;
 }
 
 .contact-item {
@@ -957,14 +961,25 @@ footer {
         font-size: 1.1rem;
     }
 
+    .contact {
+        padding: 5rem 0.5rem;
+    }
+    
+    .contact-content {
+        padding: 0;
+    }
+    
     .contact-info {
         padding: 1.5rem;
+        max-width: 100%;
+        width: 100%;
     }
     
     .contact-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.8rem;
+        max-width: 100%;
     }
     
     .contact-item i {
@@ -976,9 +991,13 @@ footer {
     
     .contact-item a,
     .contact-item p {
-        font-size: 0.95rem;
-        display: inline-block;
+        font-size: 0.9rem;
+        display: block;
         width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 
