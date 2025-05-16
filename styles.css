@@ -555,7 +555,11 @@ nav {
 .contact-content {
     max-width: 800px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -571,6 +575,7 @@ nav {
     background-color: var(--white);
     padding: 3rem;
     border-radius: 15px;
+    -webkit-box-shadow: var(--shadow);
     box-shadow: var(--shadow);
     width: 100%;
     max-width: 500px;
@@ -584,6 +589,7 @@ nav {
     -ms-flex-align: center;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .contact-item i {
@@ -592,6 +598,20 @@ nav {
     background-color: rgba(0, 184, 148, 0.1);
     padding: 1rem;
     border-radius: 50%;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .contact-item a,
@@ -599,6 +619,10 @@ nav {
     color: var(--dark-gray);
     text-decoration: none;
     font-size: 1.1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    width: 100%;
 }
 
 /* Footer */
@@ -790,9 +814,26 @@ footer {
     }
 
     .contact-content {
-        grid-template-columns: 1fr;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
         gap: 3rem;
         padding: 0 1rem;
+    }
+    
+    .contact-info {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    
+    .contact-item {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
     }
 
     .hero {
@@ -914,6 +955,30 @@ footer {
 
     .nav-links a {
         font-size: 1.1rem;
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .contact-item i {
+        font-size: 1.5rem;
+        padding: 0.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .contact-item a,
+    .contact-item p {
+        font-size: 0.95rem;
+        display: inline-block;
+        width: 100%;
     }
 }
 
